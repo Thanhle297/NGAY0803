@@ -661,6 +661,160 @@
 }
 
     </style>
+    <style>
+        /* Reset mặc định để tránh lỗi trên các thiết bị */
+* {
+    box-sizing: border-box;
+}
+
+/* Điều chỉnh container chính */
+.container {
+    height: 100vh; /* Sử dụng 100vh thay vì 97vh để tối ưu trên mobile */
+    padding: 10px; /* Thêm padding để tránh sát cạnh */
+}
+
+/* SVG trong container */
+.container svg {
+    width: 100%; /* Chuyển từ 50% sang 100% để co giãn linh hoạt */
+    height: auto; /* Giữ tỷ lệ */
+    max-width: 500px; /* Giới hạn kích thước tối đa */
+}
+
+/* Thân thư (body-letter) */
+.body-letter {
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Envelope (phong bì) */
+.envelope {
+    width: 100%;
+    max-width: 300px; /* Giới hạn kích thước tối đa */
+    height: auto;
+}
+
+/* Card (thiệp) */
+.card {
+    width: 90%; /* Giảm kích thước để vừa với phong bì trên màn hình nhỏ */
+    max-width: 270px;
+    height: auto;
+    left: 5%; /* Căn giữa tương đối */
+}
+
+/* Text trong card */
+.text {
+    font-size: clamp(20px, 5vw, 28px); /* Font-size linh hoạt */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa */
+}
+
+/* Heart (trái tim) */
+.heart {
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg); /* Căn giữa trái tim */
+}
+
+/* Form thư (wrapperLetterForm) */
+.wrapperLetterForm {
+    padding: 10px;
+}
+
+.boxLetter .formLetter {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    padding: 15px;
+}
+
+.giftbox .img {
+    width: 100%;
+    max-width: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Heart animation và mewmew */
+.heartAnimation, .mewmew1, .mewmew2 {
+    width: 100%;
+    max-width: 200px; /* Giới hạn kích thước */
+}
+
+/* Media Queries cho các kích thước màn hình khác nhau */
+@media (max-width: 768px) {
+    /* Máy tính bảng và điện thoại */
+    .valentines {
+        top: 20px; /* Giảm khoảng cách trên màn hình nhỏ */
+    }
+
+    .shadow {
+        width: 90%;
+        max-width: 330px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .textLetter h2 {
+        font-size: 24px; /* Giảm kích thước chữ */
+    }
+
+    .textLetter .contentLetter {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    svg {
+        width: 90%; /* Giảm kích thước SVG */
+    }
+
+    #text-click {
+        font-size: 30px; /* Giảm kích thước chữ trên mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Điện thoại nhỏ */
+    .envelope {
+        max-width: 200px; /* Thu nhỏ phong bì */
+    }
+
+    .card {
+        max-width: 180px; /* Thu nhỏ thiệp */
+    }
+
+    .text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .heart {
+        width: 20px;
+        height: 20px;
+        top: 80px;
+    }
+
+    .heart:before, .heart:after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .boxLetter .formLetter {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .textLetter h2 {
+        font-size: 20px;
+    }
+
+    .textLetter .contentLetter {
+        font-size: 14px;
+    }
+
+    .heartAnimation, .mewmew1, .mewmew2 {
+        max-width: 100px;
+    }
+}
+    </style>
 </head>
 
 <body>
